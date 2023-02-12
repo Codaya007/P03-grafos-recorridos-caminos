@@ -44,7 +44,7 @@ public class GrafoDirigidoEtiquetado<E> extends GrafoDirigido {
     public GrafoDirigidoEtiquetado(Integer numVert, Class clazz) {
         super(numVert);
         this.clazz = clazz;
-        etiquetas = (E[]) Array.newInstance(clazz, numVert + 1);
+        etiquetas = (E[]) Array.newInstance(clazz, numVert);
         dicVertices = new HashMap(numVert);
     }
 
@@ -69,7 +69,7 @@ public class GrafoDirigidoEtiquetado<E> extends GrafoDirigido {
     }
 
     public E obtenerEtiqueta(Integer codigo) {
-        return etiquetas[codigo];
+        return etiquetas[codigo - 1];
     }
 
     public void etiquetarVertice(Integer codigo, E etiqueta) throws Exception {

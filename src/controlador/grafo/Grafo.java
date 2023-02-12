@@ -407,4 +407,7 @@ public abstract class Grafo {
         return this.pesoCaminoMasCorto;
     }
 
+    public void setPesoCaminoMasCorto(Double peso) {
+        this.pesoCaminoMasCorto = peso;
+    }
 }

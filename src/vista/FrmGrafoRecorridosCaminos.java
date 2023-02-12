@@ -321,6 +321,7 @@ public class FrmGrafoRecorridosCaminos extends javax.swing.JDialog {
                 txtResultado.setText("EL RECORRIDO POR PROFUNDIDAD ES:\n\n" + recorrido);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             txtResultado.setText("NO SE PODIDO RECORRER EL GRAFO :(");
         }
     }//GEN-LAST:event_btnRecorridoActionPerformed
@@ -369,8 +370,8 @@ public class FrmGrafoRecorridosCaminos extends javax.swing.JDialog {
                 txtResultado.setText(result);
             }
         } catch (Exception e) {
-            // e.printStackTrace();
-            System.out.println(e.getMessage());
+             e.printStackTrace();
+//            System.out.println(e.getMessage());
             txtResultado.setText("NO SE HA ENCONTRADO UN CAMINO");
         }
     }//GEN-LAST:event_btnCAMINOMINIMOActionPerformed
